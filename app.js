@@ -151,7 +151,9 @@ function addTodo() {
 }
 
 addBtn.addEventListener('click', addTodo);
-input.value.addEventListener('keydown', (e) => {
+
+// ⭕ 올바르게 수정된 코드 (input.value -> input)
+input.addEventListener('keydown', (e) => {
   if (e.key === 'Enter') addTodo();
 });
 
